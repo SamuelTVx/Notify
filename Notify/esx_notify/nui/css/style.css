@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:wght@300;400;500;600;800&display=swap');
+
+:root {
+    --color: rgba(255, 255, 255, 0.966);
+}
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    color: var(--color);
+    font-weight: 100;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+#root {
+    display: grid;
+    justify-content: center;
+}
+
+#root .notify {
+    display: flex;
+    position: relative;
+    flex: auto;
+    min-width: 20rem;
+    width: fit-content;
+    height: 3.5rem;
+    background: rgba(94, 94, 94, 0.589);
+    animation: 3s ease-in 1s 2 reverse both paused slidein;
+    margin-top: .5rem;
+    align-items: center;
+}
+
+#root .innerText {
+    padding-left: .4rem;
+    padding-right: .4rem;
+    width: 100%;
+}
+
+#root .icon {
+    float: left;
+    color: rgba(255, 255, 255, 0.959);
+}
+
+#root .text {
+    display: inline-block;
+    margin-left: .5rem;
+}
+
+#root .error {
+    border-bottom: 3px solid #cc2c1bd3;
+}
+
+#root .success {
+    border-bottom: 3px solid #2ecc70dc;
+}
+
+#root .info {
+    border-bottom: 3px solid rgba(97, 97, 97, 0.664);
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+             'FILL' 0,
+             'wght' 400,
+             'GRAD' 0,
+             'opsz' 48
+}
+
+@keyframes anim {
+    0% {
+        transform: scaleY(0);
+    }
+    80% {
+        transform: scaleY(1.1)
+    }
+    100% {
+        transform: scaleY(1)
+    }
+}
